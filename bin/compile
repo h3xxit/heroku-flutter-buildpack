@@ -79,7 +79,7 @@ print "Getting packages from Flutter project"
 flutter/bin/flutter pub get --quiet | indent
 
 print "Compiling the project."
-flutter/bin/flutter build web --release --quiet | indent
+flutter/bin/flutter build web --dart-define OPEN_AI_API_KEY=$OPEN_AI_API_KEY --release --quiet | indent
 # --dart-define=FLUTTER_WEB_USE_EXPERIMENTAL_CANVAS_TEXT=true
 
 PUB_CACHE="$HOME/.pub-cache/"
